@@ -2,32 +2,33 @@
 /// <reference path="bubble.ts"/>
 
 class Game {
+    fish: Fish;
+    bubble: Bubble;
     
-    constructor() {
-        // fish
-        let f = document.createElement("fish");
-        document.body.appendChild(f);
+    constructor() 
+    {
+        this.fish = new Fish();
+        this.bubble = new Bubble();
+        this.startgame();
+    }
 
-        let fishx:number = Math.random() * window.innerWidth;
-        let fishy:number = Math.random() * window.innerHeight;
+    startgame()
+    { 
+        let fishs = [];
+        for (let i = 0; i < 20; i++)
+        {
+            let f = this.fish = new Fish();
+            fishs.push(f);
+        }
 
-        // we gebruiken hier left top omdat translate al in de animatie wordt gebruikt                
-        f.style.left = fishx + "px";
-        f.style.top = fishy + "px";
-
-        // de kleur moet random worden
-        f.style.webkitFilter = "hue-rotate(45deg)";
-        f.style.filter = "hue-rotate(45deg)";
-
-        // bubble
-        let b = document.createElement("bubble");
-        document.body.appendChild(b);
-                        
-        let startx:number = Math.random() * window.innerWidth;
-        b.style.left = startx + "px";
+    let bubbles = [];
+        for (let j = 0; j < 20; j++)
+        {
+            let b = this.bubble = new Bubble();
+            bubbles.push(b);
+        }
     }
 } 
-
 
 // load
 window.addEventListener("load", function() {
