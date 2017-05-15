@@ -5,6 +5,7 @@ class Game {
     fish: Fish;
     bubble: Bubble;
     
+    
     constructor() 
     {
         this.fish = new Fish();

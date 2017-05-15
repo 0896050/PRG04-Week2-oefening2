@@ -14,9 +14,13 @@ class Fish {
         f.style.top = fishy + "px";
 
         // de kleur moet random worden
-        let hue =  Math.floor(Math.random() * 360)
+        let hue =  Math.floor(Math.random() * 360);
         f.style.webkitFilter = "hue-rotate("+ hue +"deg)";
         f.style.filter = "hue-rotate("+ hue +"deg)";
+
+        let speed = Math.floor(Math.random() * 4);
+
+        f.style.animation = "fishanimation " + speed+ "s ease-in-out infinite alternate";
 
     }
  

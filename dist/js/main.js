@@ -4,6 +4,8 @@ var Bubble = (function () {
         document.body.appendChild(b);
         var startx = Math.random() * window.innerWidth;
         b.style.left = startx + "px";
+        var speed = Math.floor(Math.random() * 3 + 1);
+        b.style.animation = "bubbleup " + speed + "s linear infinite";
     }
     return Bubble;
 }());
@@ -18,6 +20,8 @@ var Fish = (function () {
         var hue = Math.floor(Math.random() * 360);
         f.style.webkitFilter = "hue-rotate(" + hue + "deg)";
         f.style.filter = "hue-rotate(" + hue + "deg)";
+        var speed = Math.floor(Math.random() * 4);
+        f.style.animation = "fishanimation " + speed + "s ease-in-out infinite alternate";
     }
     return Fish;
 }());

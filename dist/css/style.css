@@ -23,13 +23,11 @@ fish {
     -webkit-filter: hue-rotate(90deg);
     filter: hue-rotate(90deg);
     
-    animation: fishanimation 4s ease-in-out infinite alternate;
 }
 
 bubble {
     background-image: url(../images/bubble.png);
     width:55px; height: 55px;
-    animation: bubbleup 3s linear infinite;
 }
 
 background {
