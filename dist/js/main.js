@@ -20,7 +20,7 @@ var Fish = (function () {
         var hue = Math.floor(Math.random() * 360);
         f.style.webkitFilter = "hue-rotate(" + hue + "deg)";
         f.style.filter = "hue-rotate(" + hue + "deg)";
-        var speed = Math.floor(Math.random() * 4);
+        var speed = Math.floor(Math.random() * 4 + 1);
         f.style.animation = "fishanimation " + speed + "s ease-in-out infinite alternate";
     }
     return Fish;

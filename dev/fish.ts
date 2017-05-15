@@ -18,7 +18,7 @@ class Fish {
         f.style.webkitFilter = "hue-rotate("+ hue +"deg)";
         f.style.filter = "hue-rotate("+ hue +"deg)";
 
-        let speed = Math.floor(Math.random() * 4);
+        let speed = Math.floor(Math.random() * 4 + 1);
 
         f.style.animation = "fishanimation " + speed+ "s ease-in-out infinite alternate";
 
