@@ -46,6 +46,16 @@ background {
   }
 }
 
+@keyframes bubblemove {
+  0% {
+    transform: translateX(0px);
+  }
+  
+  100% {
+    transform: translateX(100px);
+  }
+}
+
 @keyframes bubbleup {
   0% {
     transform: translateY(100vh);

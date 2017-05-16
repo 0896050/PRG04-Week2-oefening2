@@ -2,6 +2,7 @@
 /// <reference path="bubble.ts"/>
 
 class Game {
+
     fish: Fish;
     bubble: Bubble;
     
@@ -16,14 +17,14 @@ class Game {
     startgame()
     { 
         let fishs = [];
-        for (let i = 0; i < 20; i++)
+        for (let i = 0; i < 100; i++)
         {
             let f = this.fish = new Fish();
             fishs.push(f);
         }
 
     let bubbles = [];
-        for (let j = 0; j < 20; j++)
+        for (let j = 0; j < 100; j++)
         {
             let b = this.bubble = new Bubble();
             bubbles.push(b);

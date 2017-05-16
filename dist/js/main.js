@@ -5,7 +5,9 @@ var Bubble = (function () {
         var startx = Math.random() * window.innerWidth;
         b.style.left = startx + "px";
         var speed = Math.floor(Math.random() * 3 + 1);
-        b.style.animation = "bubbleup " + speed + "s linear infinite";
+        var move = Math.floor(Math.random() * 3 + 1);
+        b.style.animation = "bubbleup " + speed + "s linear infinite",
+            "bubblemove " + move + "s ease-in-out infinite alternate";
     }
     return Bubble;
 }());
@@ -33,12 +35,12 @@ var Game = (function () {
     }
     Game.prototype.startgame = function () {
         var fishs = [];
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; i < 100; i++) {
             var f = this.fish = new Fish();
             fishs.push(f);
         }
         var bubbles = [];
-        for (var j = 0; j < 20; j++) {
+        for (var j = 0; j < 100; j++) {
             var b = this.bubble = new Bubble();
             bubbles.push(b);
         }
